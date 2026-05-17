@@ -1,0 +1,12 @@
+[Unit]
+Description=Circular scroll for Let's Note touchpad
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/circular-scroll/circular-scroll.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
